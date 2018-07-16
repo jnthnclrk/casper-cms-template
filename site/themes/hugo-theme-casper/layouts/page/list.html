@@ -43,6 +43,11 @@
 </header>
 
 <main class="content" role="main">
+
+							{{ range $.Data.Pages }}
+						<a class="p-2 text-muted" href="{{.Permalink}}">{{.Title}}</a>
+							{{ end }}
+
     {{ $paginator := .Paginator }}
 
 	<div class="extra-pagination inner">
